@@ -26,6 +26,15 @@ CREATE TABLE profiles (
 );
 
 
+CREATE TABLE regions (
+  id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(150) NOT NULL,
+  parent_id INT unsigned DEFAULT NULL,
+  code INT DEFAULT NULL,
+  zip INT DEFAULT NULL,
+  created_at DATETIME DEFAULT NOW(),
+  updated_at DATETIME DEFAULT NOW() ON UPDATE NOW()
+);
 
 
 -- Таблица сообщений
